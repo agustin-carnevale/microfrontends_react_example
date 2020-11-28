@@ -1,4 +1,4 @@
-//domain: https://d2qa6fc2z9buq3.cloudfront.net
+//deployed at: https://d2qa6fc2z9buq3.cloudfront.net
 
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -12,16 +12,16 @@ const generateClassname = createGenerateClassName({
 });
 
 const App = () => {
- return (
-    <BrowserRouter>
-        <StylesProvider generateClassName={generateClassname}>
-            <div>
-                <Header />
-                <MarketingApp />
-            </div> 
-        </StylesProvider>
-    </BrowserRouter>
- );
+    return (
+        <BrowserRouter>
+            <StylesProvider generateClassName={generateClassname}>
+                <div>
+                    <Header />
+                    <MarketingApp />
+                </div> 
+            </StylesProvider>
+        </BrowserRouter>
+    );
 }
 
 export default App;
