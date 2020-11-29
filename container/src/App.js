@@ -32,11 +32,11 @@ const App = () => {
         <Router history={history}>
             <StylesProvider generateClassName={generateClassname}>
                 <div>
-                    <Header isSignedIn={isSignedIn} onSignOut={ () => {setIsSignedIn(false)} }/>
+                    <Header isSignedIn={isSignedIn} onSignOut={() => setIsSignedIn(false)}/>
                     <Suspense fallback={<ProgressBar />}>
                         <Switch>
                             <Route path="/auth">
-                                <AuthLazy onSignIn={ () => {setIsSignedIn(true)}  }/>
+                                <AuthLazy onSignIn={() => setIsSignedIn(true)}/>
                             </Route>
                             <Route path="/dashboard">
                                 {!isSignedIn && <Redirect to="/"/>}
